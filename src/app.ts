@@ -7,7 +7,6 @@
 
 // ANGULAR ORIENTED TRAINING
 // Angular is written in TypeScript
-// @see https://github.com/n-a-n/ngx-sandbox/blob/master/src/app/core/services/api.service.ts
 // Typescript is awesome for huge JS projects
 
 // INSTALL TYPESCRIPT
@@ -24,7 +23,6 @@ function launchGame(playerName) {
   console.log(playerName + ', lance la partie !');
 }
 launchGame(players[0]);
-// run TS on "npm start"
 // * ES6 complient
 const playGame = playerName => console.log(`${playerName}, lance la partie !`);
 playGame(players[1]);
@@ -63,4 +61,4 @@ stopGame(playerName);
 // Don't forget JavaScript, especially ES5
 // JS is NOT Java (class/static types oriented), JavaScript is NOT Golang (comp)
 // Microsoft isn't always trusted in the JavaScript developer community
-// A lot of breaking change since the beginning
+// A lot of breaking changes since the beginning
