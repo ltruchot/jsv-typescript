@@ -19,35 +19,12 @@
 // WHAT IS TYPESCRIPT ?
 // Open source JavaScript transpiler, maintained by Microsoft
 // * ES5 complient
-var players = ['Mario', 'Luigi', 'Peach'];
-function launchGame(playerName) {
-  console.log(playerName + ', lance la partie !');
-}
-launchGame(players[0]);
 // run TS on "npm start"
 // * ES6 complient
-const playGame = playerName => console.log(`${playerName}, lance la partie !`);
-playGame(players[1]);
-
 // * ESNext complient
-async function welcomePlayer(playerName) {
-  if (players.includes(playerName)) {
-    playGame(playerName);
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    console.log('La partie commence !');
-  }
-}
-welcomePlayer('Peach');
 // and decorators, like @Component in Angular
 // and a lot more like Enums, Interfaces, etc.
-
 // * Static types
-const playerName: string = 'Enzo';
-function stopGame(player: string) {
-  console.log(`Game Over ${player}`);
-  return false;
-}
-stopGame(playerName);
 // @see https://github.com/n-a-n/ngx-sandbox/blob/master/src/app/core/services/api.service.ts
 
 // WHY IT'S AWESOME ?
