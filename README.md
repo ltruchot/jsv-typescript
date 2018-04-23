@@ -14,7 +14,7 @@ Run `npm i && npm start` to see TypeScript in action, or install TS globally `np
 ## Versions:
 
 Previous full update of dependencies: 2018-03-25
-* current project version 0.0.1
-* node 8.10.x
-* npm 5.7.x
+* current project version 0.0.2
+* node 8.11.x
+* npm 5.8.x
 * typescript 2.7.2

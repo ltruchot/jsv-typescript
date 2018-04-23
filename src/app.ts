@@ -1,64 +1,29 @@
-// ************************* DISCOVERING TYPESCRIPT **************************/
-// ***************************************************************************/
+// npm init a project
 
-// FOREWORDS
-// reach a pro level for any kind of TS project
-// being able to begin with angular without any lack
+// TSLINT have the abaility to check our code on the fly, like a grammar tool
+// npm install --save-dev typescript tslint
+// write tslint.json
+// marioScore = 2 ++ 1 + 'points"; // a lot of error here
+const peachScore = 2 + 1 + ' points'; // clean code
 
-// ANGULAR ORIENTED TRAINING
-// Angular is written in TypeScript
-// Typescript is awesome for huge JS projects
+// AUTOMATED PROCESS TO BUILD & WATCH
+// npm i --save-dev webpack-cli webpack
+// write webpack.config.js
+// write index.html
+// create a build job
+console.log('peach à déjà ' + peachScore);
+// set webpack to autorun tsc
+// npm i awesome-typescript-loader --save-dev
+// create a watch job
+console.log('peach à déjà ' + peachScore + ', wahou !');
 
-// INSTALL TYPESCRIPT
-// install node, @see https://nodejs.org/en/
-// npm i -g typescript
-// run tsc in a folder with *.ts files
-// @see tsconfig.json
+// AUTOMATED PROCESS TO WATCH & RELOAD
+// npm i --save-dev webpack-dev-server
+// add HTML plugin
+// npm i --save-dev html-webpack-plugin
+// create a start:dev job
+console.log('peach à déjà ' + peachScore + ', incroyable !');
 
-// WHAT IS TYPESCRIPT ?
-// Open source JavaScript transpiler, maintained by Microsoft
-// * ES5 complient
-var players = ['Mario', 'Luigi', 'Peach'];
-function launchGame(playerName) {
-  console.log(playerName + ', lance la partie !');
-}
-launchGame(players[0]);
-// * ES6 complient
-const playGame = playerName => console.log(`${playerName}, lance la partie !`);
-playGame(players[1]);
-
-// * ESNext complient
-async function welcomePlayer(playerName) {
-  if (players.includes(playerName)) {
-    playGame(playerName);
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    console.log('La partie commence !');
-  }
-}
-welcomePlayer('Peach');
-// and decorators, like @Component in Angular
-// and a lot more like Enums, Interfaces, etc.
-
-// * Static types
-const playerName: string = 'Enzo';
-function stopGame(player: string) {
-  console.log(`Game Over ${player}`);
-  return false;
-}
-stopGame(playerName);
-// @see https://github.com/n-a-n/ngx-sandbox/blob/master/src/app/core/services/api.service.ts
-
-// WHY IT'S AWESOME ?
-// IDE intellisense & support
-// live in the future, with an always compatible JavaScript code
-// implicit documentation for everything
-// Get types for any existing framework/lib
-// learning curve hardness is your decision
-// compilation && errors
-// common readable base of work, for my team and the future me
-
-// SOME CONS
-// Don't forget JavaScript, especially ES5
-// JS is NOT Java (class/static types oriented), JavaScript is NOT Golang (comp)
-// Microsoft isn't always trusted in the JavaScript developer community
-// A lot of breaking changes since the beginning
+// add port 4200, mode development
+console.log(`peach à déjà ${peachScore}, c'est la meilleure !`);
+throw new Error();
