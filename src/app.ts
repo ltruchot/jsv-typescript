@@ -26,6 +26,9 @@ console.log('peach à déjà ' + peachScore + ', incroyable !');
 
 // add port 4200, mode development
 console.log(`peach à déjà ${peachScore}, c'est la meilleure !`);
-throw new Error();
+// throw new Error();
 
 // CHECK REAL TYPESCRIPT HERE
+const players = ['Peach', 'Mario'];
+const playerName: string = players.includes('Peach') ? 'Peach' : '';
+console.log(playerName + ' a rejoint la partie');
