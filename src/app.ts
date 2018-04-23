@@ -27,3 +27,5 @@ console.log('peach à déjà ' + peachScore + ', incroyable !');
 // add port 4200, mode development
 console.log(`peach à déjà ${peachScore}, c'est la meilleure !`);
 throw new Error();
+
+// CHECK REAL TYPESCRIPT HERE
