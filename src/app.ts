@@ -1,4 +1,7 @@
 // npm init a project
+// npm i --save-dev typescript
+// create src/app.ts
+// create a start job
 
 // TSLINT have the abaility to check our code on the fly, like a grammar tool
 // npm install --save-dev typescript tslint
