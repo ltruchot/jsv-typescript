@@ -26,12 +26,11 @@ console.log('peach à déjà ' + peachScore + ', wahou !');
 // npm i --save-dev html-webpack-plugin
 // create a start:dev job
 console.log('peach à déjà ' + peachScore + ', incroyable !');
-
 // add port 4200, mode development
 console.log(`peach à déjà ${peachScore}, c'est la meilleure !`);
 // throw new Error();
 
-// CHECK REAL TYPESCRIPT HERE
+// CHECK REAL ES6+ & TYPED FEATURE
 const players = ['Peach', 'Mario'];
 const playerName: string = players.includes('Peach') ? 'Peach' : '';
 console.log(playerName + ' a rejoint la partie');
