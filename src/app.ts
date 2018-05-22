@@ -99,13 +99,20 @@ let anyPlayerInfos: any[];
 // ordered types (or tuple type)
 let playerOptions: [number | null, string, boolean] = [8, 'easy', true];
 
-// OBJECT TYPE INTRODUCTION
+// OBJECT TYPE INTRODUCTION & ASSERTION
 // infered
 const options = { aa: true, level: 'easy' };
 // manually typed
 let player: { name: string; age: number };
 player = { name: 'Peach', age: 31 };
 // typed
-type player = { name: string; age: number };
-const players: player[] = [player];
-// maybe a better way ???
+type Player = { name: string; age: number }; // retroactive
+const players: Player[] = [player, player, player];
+// assertion
+const strPlayer = JSON.stringify(player);
+function getName(json: string): string {
+  const parsedStr: Player = JSON.parse(json);
+  return parsedStr.name;
+}
+console.log(getName(strPlayer));
+players.forEach(curr => console.log((curr as any).debug));
