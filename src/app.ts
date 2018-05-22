@@ -1,40 +1,25 @@
-// COMPLEX OBJECT, FUNCTION TYPE & INTERFACE
-// model import/export
-import { Player, PlayerService, IRequestService, IGame } from './common.model';
+import { Player } from './Player.class';
+import { RichPlayer } from './RichPlayer.class';
+import { PoorPlayer } from './PoorPlayer.class';
 
-const allPlayers: Player[] = [
-  { name: 'Peach', age: 31 },
-  { name: 'Mario', age: 44 }
-];
-const playerService: PlayerService = {
-  id: 'Player Service',
-  getPlayer: name => allPlayers.find(curr => name === curr.name)
-};
+// CLASSES
+// class & constructor
+// properties: declare, public, private, readonly, static
+const player = new Player('Peach', 31, true);
+// player.type = 'test';
+// player.banned = 'test';
 
-const player: Player = playerService.getPlayer('Mario');
-console.log(player);
+// setters & getters
+console.log(player.formattedAge);
 
-// an interface for our services
-const requestService: IRequestService = {
-  id: 'HTTP Service',
-  get: (): string => JSON.parse('response')
-};
-// Always use Interface of Objects
+player.level = 'n';
+console.log(player.level);
 
-// nested interface
-export const game: IGame = {
-  players: allPlayers,
-  playerService,
-  requestService,
-  history: {}
-};
+// extends & protected
+const richPlayer = new RichPlayer('Mario', 44, 1200);
+console.log(richPlayer);
 
-// optional property
-game.isRunning = true;
+// abstract
+const poorPlayer = new PoorPlayer('Luigi', 46, false);
 
-// index signature
-game.history.A0 = 'Peach join the game';
-game.history.A1 = 'Peach score is now 1';
-game.history.A2 = 'Mario join the game';
-
-// GENERIC TYPE
+// implements
