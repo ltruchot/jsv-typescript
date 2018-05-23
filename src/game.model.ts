@@ -26,3 +26,8 @@ export interface IGame {
 interface IGameData {
   [key: string]: string;
 }
+
+export interface IGameItem {
+  type: string;
+  logType: () => string;
+}

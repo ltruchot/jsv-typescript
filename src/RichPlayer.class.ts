@@ -6,4 +6,8 @@ export class RichPlayer extends Player {
     // this._banned = true;
     this.isRich = true;
   }
+  getStatus() {
+    console.log('Les joueurs riches ne peuvent pas être bannis');
+    return super.getStatus();
+  }
 }

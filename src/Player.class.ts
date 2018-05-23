@@ -3,7 +3,7 @@ export class Player {
   private _banned: boolean;
 
   private _level: string;
-  readonly type: string = 'Quizz Player';
+  readonly type: string = 'Human Player';
   protected isRich: boolean = false;
   static levels: { [s: string]: string } = {
     n: 'noob',
